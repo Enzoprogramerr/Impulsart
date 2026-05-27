@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+<BaseLayout 
+    title="Botines",
+    description="Descubre nuestra colección de botines",
+    path="/botines",
+    image="../assets/astro.svg">
+    <h3>Lo mas nuevo en el mercado</h3>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-red-500/50 transition-all duration-300 hover:-translate-y-2">
+        <div class="overflow-hidden">
+          <img
+            src="https://newsport.vtexassets.com/arquivos/ids/21032339/FD6574103-A.jpg?v=639101482897900000"
+            alt="Zapatillas Nike Court Lite 4"
+            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold leading-snug">
+            Zapatillas Nike Tenis-Pádel Court Lite 4 Hombre
+          </h4>
+        </div>
+      </article>
+
+      <article class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-red-500/50 transition-all duration-300 hover:-translate-y-2">
+        <div class="overflow-hidden">
+          <img
+            src="https://newsport.vtexassets.com/arquivos/ids/20264422/31101913-A.jpg?v=638820621705030000"
+            alt="Zapatillas Puma Skyrocket Lite"
+            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold leading-snug">
+            Zapatillas Puma Running Skyrocket Lite Unisex
+          </h4>
+        </div>
+      </article>
+
+      <article class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-red-500/50 transition-all duration-300 hover:-translate-y-2">
+        <div class="overflow-hidden">
+          <img
+            src="https://newsport.vtexassets.com/arquivos/ids/20329572/JQ5081-A.jpg?v=638841206506330000"
+            alt="Zapatillas Adidas Questar 3"
+            class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold leading-snug">
+            Zapatillas Adidas Running Questar 3 Hombre
+          </h4>
+        </div>
+      </article>
+
+    </div>
+
+</BaseLayout>

@@ -1,0 +1,71 @@
+---
+import WhatsappButton from "../ui/WhatsappButton.astro";
+
+---
+
+<footer>
+  <div class="footer-content">
+    <p>© 2026 NEWSPORT. Todos los derechos reservados.</p>
+    <nav>
+      <li>Política de Privacidad</li>
+      <li>Términos de Uso</li>
+      <li>Contacto</li>
+    </nav>
+    <WhatsappButton
+    type="reserva"  
+      >RESERVAR</WhatsappButton>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  nav li {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  nav li:hover {
+    color: #00c6ff;
+    transform: scale(1.05);
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    nav {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+</style>

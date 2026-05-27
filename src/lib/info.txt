@@ -1,0 +1,13 @@
+¿Qué va en lib?
+
+Funciones, utilidades, configuraciones y lógica compartida.
+
+Por ejemplo:
+
+formatear precios
+generar enlaces de WhatsApp
+convertir texto a slugs
+validar datos
+consumir APIs
+manejar fechas
+helpers de SEO

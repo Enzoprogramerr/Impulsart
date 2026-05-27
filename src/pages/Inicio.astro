@@ -1,0 +1,14 @@
+---
+import Contador from '../components/ui/Contador';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="titulo de la pagina",
+  description="descripcion de la pagina",
+  path="/ruta-de-la-pagina"
+  >
+	<Contador client:load></Contador>
+
+</BaseLayout>
+ 

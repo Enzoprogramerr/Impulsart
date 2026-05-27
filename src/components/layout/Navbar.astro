@@ -1,0 +1,29 @@
+---
+import { SITE_CONFIG } from "../../config/site";
+---
+
+<!-- 
+Debe tener:
+1-Logo
+2-Links dinámicos
+3-CTA principal
+4-Menú mobile
+5-Header sticky (
+    position: sticky;
+    top: 0;) 
+-->
+
+
+<nav>
+      <ul>
+        {SITE_CONFIG.navigation.map((item: { href: string | URL | null | undefined; label: unknown; })=> (
+            <li>
+                <a 
+                    href={item.href}
+                >
+                    {item.label}
+                </a>
+            </li>
+        ))}
+      </ul>
+</nav>

@@ -1,0 +1,40 @@
+---
+const nombre = "Gym Power"; 
+import Contador from "../ui/Contador"
+import Navbar from "./Navbar.astro";
+---
+
+<header>
+  <div>
+    
+    <!-- Logo + Marca -->
+    <div>
+      <img 
+        src="/favicon.svg" 
+        alt="Logo"
+      />
+      <h1>Nombre de marca</h1> 
+    </div>
+
+    <!-- Navegación -->
+    <Navbar/>
+
+  </div>
+</header>
+
+
+<!-- 
+  /* Responsivo */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+  }
+</style> -->

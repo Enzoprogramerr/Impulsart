@@ -1,0 +1,57 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+
+  cursor: pointer;
+  border: none;
+
+  transition: var(--transition);
+}
+.btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.btn-cta {
+  background: var(--color-accent);
+  color: black;
+  font-weight: 600;
+
+  transform: scale(1.05);
+}
+
+.btn-cta:hover {
+  transform: scale(1.08);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-outline:hover {
+  background: var(--color-border);
+}

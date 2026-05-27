@@ -1,0 +1,44 @@
+---
+// src/components/ui/WhatsAppButton.astro
+
+import { SITE_CONFIG } from "../../config/site";
+import { generateWhatsAppLink } from "../../lib/whatsapp";
+
+type MessageType = "general" | "reserva" | "producto";
+
+interface Props {
+  type?: MessageType;
+  productName?: string;
+  class?: string;
+}
+
+const { type = "general", 
+        productName,
+      class: className = "",
+    } = Astro.props as Props;
+
+let message;
+
+// 🎯 ACÁ decidís qué mensaje usar
+if (type === "producto") {
+  message = productName
+    ? SITE_CONFIG.whatsapp.messages.producto(productName)
+    : "Hola! Estoy interesado en un producto";
+} else {
+  message = SITE_CONFIG.whatsapp.messages[type]();
+}
+
+// 🔗 ACÁ solo armás el link
+const link = generateWhatsAppLink(
+  SITE_CONFIG.whatsapp.phone,
+  message
+);
+---
+
+<a 
+  href={link} 
+  target="_blank"
+  class={`inline-flex items-center gap-2 ${className}`}
+  >
+  <slot />
+</a>

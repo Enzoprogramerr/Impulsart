@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES GLOBALES */
+:root {
+  /* TYPOGRAPHY */
+  --fs-body: clamp(1rem, 1.1vw, 1.125rem);
+
+  --fs-h1: clamp(
+    2.5rem,
+    7vw,
+    5rem
+  ); /* recomendacion usar line-height:0.95 - 1.1 */
+
+  --fs-h2: clamp(1.75rem, 4vw, 3rem); /* recomendacion usar line-height:1.1 */
+
+  --fs-h3: clamp(1.25rem, 2vw, 2rem); /* recomendacion usar line-height:1.2 */
+}
+
+/* BASE */
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* TIPOGRAFÍA */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ELEMENTOS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* UTILIDADES */
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
