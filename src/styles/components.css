@@ -55,3 +55,40 @@
 .btn-outline:hover {
   background: var(--color-border);
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: white;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translate(-4px);
+}
+
+.card_image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  flex: 1;
+}
+
+.card_content h3 {
+  margin: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}

@@ -1,0 +1,36 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+    image?: string;
+    imageAlt?: string;
+}
+
+const{
+    title,
+    description, 
+    image,
+    imageAlt
+} = Astro.props;
+---
+
+<article>
+    {
+        image && (
+            <img
+                src={image}
+                alt={imageAlt}
+                class="card_image"
+            /> 
+        )
+    }
+    <div class="card_content">
+        <h3>{title}</h3>
+        {
+            description && (
+            <p>{description}</p>
+            )
+        }
+        <slot/>
+    </div>
+</article>
